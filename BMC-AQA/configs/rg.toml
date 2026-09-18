@@ -1,0 +1,44 @@
+# Runnable reference preset. Hyperparameters are examples, not certified paper settings.
+# All modality axes and missing-rate triples follow RGB, optical flow, audio.
+[data]
+dataset = "RG"
+action_type = "Ball"
+clip_num = 68
+# Optional paths are relative to --data-root (absolute paths also work):
+
+[model]
+hidden_dim = 256
+heads = 4
+encoder_layers = 2
+generator_layers = 2
+decoder_layers = 2
+grades = 8
+key_dim = 128
+dropout = 0.1
+use_fcm = true
+use_hmoe = true
+
+[retrieval]
+top_k = 5
+temperature = 0.1
+key_batch_size = 256
+
+[loss]
+lambda_comp = 0.5
+lambda_ret = 0.02
+eta = 0.05
+sigma_y = 0.08
+tau_loss = 0.1
+
+[training]
+epochs = 100
+batch_size = 32
+lr = 0.0001
+weight_decay = 0.0001
+grad_clip = 1.0
+val_fraction = 0.15
+num_workers = 0
+seed = 1
+eval_mask_seed = 2026
+imr_rates = [0.3, 0.5, 0.7]
+
