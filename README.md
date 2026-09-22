@@ -1,6 +1,7 @@
 # BMC-AQA: HIERARCHICAL MOE WITH PROMPT-ANNOTATED RAG FOR MULTIMODAL ACTION QUALITY ASSESSMENT UNDER IMBALANCED MODALITY MISSINGNESS
 
-##### The complete code will be released after the ICASSP results are announced.
+
+![Uploading 论文框架.png…]()
 
 ## Repository structure
 
